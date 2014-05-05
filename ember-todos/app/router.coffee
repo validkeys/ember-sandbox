@@ -2,7 +2,7 @@ Router = Ember.Router.extend
   location: 'auto'
 
 Router.map(->
-  @resource 'todos'
+  @resource 'todos', path: '/'
 );
 
 `export default Router;`

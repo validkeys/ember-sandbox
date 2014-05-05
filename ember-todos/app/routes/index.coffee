@@ -1,5 +1,2 @@
-IndexRoute = Ember.Route.extend
-  redirect: ->
-    @transitionTo('todos')
-
+IndexRoute = Ember.Route.extend();
 `export default IndexRoute`
