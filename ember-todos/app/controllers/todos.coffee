@@ -12,6 +12,11 @@ TodosController = Ember.ArrayController.extend
       newTodo.save().then =>
         @set 'newTitle', ''
 
+    clearCompleted: ->
+      completed = @filterBy 'isCompleted', true
+      completed.invoke 'deleteRecord'
+      completed.invoke 'save'
+
   num_incomplete:(->
     @filterBy('isCompleted', false).get('length')
   ).property('@each.isCompleted')
@@ -27,5 +32,16 @@ TodosController = Ember.ArrayController.extend
   isComplete:(->
     @get('complete')
   ).property('complete')
+
+  allAreDone:( (key, value) ->
+    # if this isnt running as a result
+    # of being manually checked
+    if value == undefined
+      !!@get('length') && @everyProperty('isCompleted', true)
+    else
+      @setEach  'isCompleted', value
+      @invoke   'save'
+      value
+  ).property('@each.isCompleted')
 
 `export default TodosController;`
