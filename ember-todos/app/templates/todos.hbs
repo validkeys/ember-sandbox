@@ -1,0 +1,10 @@
+<h2>Todos</h2>
+
+<ul>
+{{#each controller}}
+  <li {{bind-attr class="isComplete" }}>
+    {{input type="checkbox" name="complete" checked=complete}}
+    {{title}}
+  </li>
+{{/each}}
+</ul>
