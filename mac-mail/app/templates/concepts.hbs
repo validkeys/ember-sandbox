@@ -1,17 +1,20 @@
-{{outlet "new-concept"}}
+<div class="table-cell second-col">
+  {{outlet "new-concept"}}
+  {{#link-to 'concepts.new' bucket }}Create a new concept{{/link-to}}
+  <ul>
+    {{#each concept in controller itemController="concept"}}
+    <li>
+      <h5>{{#link-to 'concept' concept }}{{concept.title}}{{/link-to}}</h5>
+      <p>{{ concept.description }}</p>
+      <button {{action "removeConcept"}}>X</button>
+    </li>
+    {{else}}
+    <li>
+      You have no concepts in this bucket
+    </li>
+    {{/each}}
+  </ul>
+</div>
+<div class="table-cell third-col">{{ outlet }}</div>
 
-<ul>
-  {{#each concept in controller itemController="concept"}}
-  <li>
-    <h5>{{ concept.title }}</h5>
-    <p>{{ concept.description }}</p>
-    <button {{action "removeConcept"}}>X</button>
-  </li>
-  {{else}}
-  <li>
-    You have no concepts in this bucket
-  </li>
-  {{/each}}
-</ul>
 
-{{#link-to 'concepts.new' bucket }}Create a new concept{{/link-to}}

@@ -1,0 +1,7 @@
+<h1>NEW POST!</h1>
+<div>
+{{textarea value=newBody placeholder="Enter your post"}}
+</div>
+<div>
+<button {{ action "createPost"}} {{bind-attr disabled="cantSubmit"}}>Create Post</button>
+</div>

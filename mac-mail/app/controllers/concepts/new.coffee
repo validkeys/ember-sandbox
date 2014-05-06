@@ -10,19 +10,21 @@ ConceptsNewController = Ember.ObjectController.extend
   actions:
     createConcept: ->
       unless @get('cantSubmit')
+
+        bucket = @get('bucket')
+
         newConcept = @store.createRecord 'concept',
           title:       @get('newTitle')
           description: @get('newDescription')
-          bucket:      @get('bucket')
+          bucket:      bucket
 
-        console.log newConcept
 
         newConcept.save().then =>
-          console.log newConcept
-          @set 'newTitle',        ''
-          @set 'newDescription',  ''
-          @transitionToRoute 'concepts', @get('bucket')
-          newConcept
+          bucket.get('concepts').pushObject newConcept
+
+          @setProperties newTitle: '', newDescription: ''
+          
+          @transitionToRoute 'concepts', bucket
 
 
 

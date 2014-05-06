@@ -1,4 +1,5 @@
 ConceptController = Ember.ObjectController.extend
+
   actions:
     removeConcept: ->
       if confirm('Really?')

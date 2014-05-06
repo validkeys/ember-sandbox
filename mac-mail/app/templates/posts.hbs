@@ -1,0 +1,9 @@
+<ul>
+{{#each post in controller}}
+  <li>
+    {{ post.body }}
+  </li>
+{{/each}}
+</ul>
+{{outlet}}
+{{#link-to 'posts.new'}}New Post!{{/link-to}}
