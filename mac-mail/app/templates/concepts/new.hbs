@@ -1,0 +1,8 @@
+<h4>New Concept:</h4>
+<div>
+{{input type="text" value=newTitle placeholder="Enter your title"}}
+</div>
+<div>
+{{textarea value=newDescription placeholder="Enter your description"}}
+</div>
+<button {{bind-attr disabled="cantSubmit"}} {{action "createConcept"}}>Create Concept</button>

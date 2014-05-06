@@ -1,1 +1,17 @@
-<h1>LISTING!</h1>
+{{outlet "new-concept"}}
+
+<ul>
+  {{#each concept in controller itemController="concept"}}
+  <li>
+    <h5>{{ concept.title }}</h5>
+    <p>{{ concept.description }}</p>
+    <button {{action "removeConcept"}}>X</button>
+  </li>
+  {{else}}
+  <li>
+    You have no concepts in this bucket
+  </li>
+  {{/each}}
+</ul>
+
+{{#link-to 'concepts.new' bucket }}Create a new concept{{/link-to}}

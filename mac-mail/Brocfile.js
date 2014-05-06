@@ -10,8 +10,7 @@ var app = new EmberApp({
 
 // Use this to add additional libraries to the generated output files.
 app.import(
-  'vendor/ember-data/ember-data.js',
-  '/vendor/ember-localstorage-adapter/localstorage_adapter.js'
+  'vendor/ember-data/ember-data.js'
 );
 
 // If the library that you are including contains AMD or ES6 modules that
