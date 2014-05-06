@@ -1,0 +1,50 @@
+<h1>You have {{controller.length}} Bookmarks</h1>
+<h5>{{ num_favorites }} Favorites</h5>
+<h5>{{ num_regular }} Regulars</h5>
+
+<strong>FAVSIES</strong>
+<table>
+  <tr>
+    <th>title</th>
+    <th>url</th>
+    <th>Favorite?</th>
+  </tr>
+  {{#each bookmark in favorites itemController="bookmark"}}
+  <tr>
+    <td>{{ bookmark.title }}</td>
+    <td>{{ bookmark.url }}</td>
+    <td>{{input type="checkbox" checked=isFavorite }}</td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>You have no bookmarks</td>
+  </tr>
+  {{/each}}
+</table>
+
+<strong>REGSIES</strong>
+<table>
+  <tr>
+    <th>title</th>
+    <th>url</th>
+    <th>Favorite?</th>
+  </tr>
+  {{#each bookmark in regulars itemController="bookmark"}}
+  <tr>
+    <td>{{ bookmark.title }}</td>
+    <td>{{ bookmark.url }}</td>
+    <td>{{input type="checkbox" checked=isFavorite }}</td>
+  </tr>
+  {{else}}
+  <tr>
+    <td>You have no bookmarks</td>
+  </tr>
+  {{/each}}
+</table>
+
+{{#link-to 'bookmarks.new'}}Create A New Bookmark{{/link-to}}
+
+<hr />
+
+{{ outlet }}
+
