@@ -5,12 +5,15 @@ BucketsNewController = Ember.ObjectController.extend
   actions:
     createBucket: ->
       
-      newBucket = @store.createRecord 'bucket',
-        title: @get('newTitle')
+      if Ember.isEmpty(@get('newTitle'))
+        alert 'Bucket name can\'t be blank!' 
+      else
+        newBucket = @store.createRecord 'bucket',
+          title: @get('newTitle')
 
-      newBucket.save().then =>
-        @transitionToRoute 'buckets'
+        newBucket.save().then =>
+          @transitionToRoute 'buckets'
 
-      @set 'newTitle', ''
+        @set 'newTitle', ''
 
 `export default BucketsNewController;`

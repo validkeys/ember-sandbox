@@ -1,13 +1,18 @@
 <div class="table">
   {{outlet "new-bucket-form"}}
-  <div class="table-cell">
+  <div class="table-cell first-col">
     <ul>
     {{#each bucket in controller}}
-      <li>{{ bucket.title }}</li>
+      <li>
+        {{#link-to 'concepts' bucket activeClass="selected"}}{{ bucket.title }}{{/link-to}}
+      </li>
     {{else}}
       You have no buckets
     {{/each}}
     </ul>
     {{#link-to 'buckets.new'}}Add A Bucket{{/link-to}}
+  </div>
+  <div class="table-cell second-col">
+    {{outlet "email-listing"}}
   </div>
 </div>
