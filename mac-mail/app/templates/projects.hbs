@@ -1,0 +1,9 @@
+<h1>SELECT A PROJECT!</h1>
+
+<ul>
+  {{#each project in controller itemController="project"}}
+  <li>
+    {{#link-to 'bucket' project defaultBucket }}{{ project.title }}{{/link-to}}
+  </li>
+  {{/each}}
+</ul>
