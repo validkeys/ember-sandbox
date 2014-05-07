@@ -419,6 +419,27 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/templates/projects/index.hbs",
+			"settings":
+			{
+				"buffer_size": 13,
+				"line_ending": "Unix",
+				"name": "index.hbs"
+			}
+		},
+		{
+			"contents": "",
+			"file": "app/templates/project/index.hbs",
+			"file_size": 5,
+			"file_write_time": 130439385210000000,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "index.hbs"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -614,6 +635,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"",
 			"/Users/kyledavis/Sites/mstrbrnch-ember",
 			"/Users/kyledavis/Sites/mstrbrnch/src",
 			"/Users/kyledavis/Sites/circus/src/",
@@ -627,6 +649,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"jquery",
+			"vendor/jquery",
 			"</div>",
 			"false",
 			"@get('bucket')",
@@ -752,9 +776,7 @@
 			"search_term",
 			"completeTransition",
 			"COMPLETING TRANSITION ON FIRST VIEW",
-			"COMPLETING TRANSITION ON FIRST VIEW ",
-			"slat ready",
-			"slat ready "
+			"COMPLETING TRANSITION ON FIRST VIEW "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -774,8 +796,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/templates/projects/index.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								13
+							]
+						],
+						"settings":
+						{
+							"auto_name": "index.hbs",
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/templates/project/index.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "index.hbs",
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
