@@ -1,3 +1,17 @@
 <h2 id='title'>Welcome to Mac Mail</h2>
-{{#link-to 'projects'}}Projects{{/link-to}}
+<div class="slider-menu">
+  {{#link-to 'projects'}}Projects{{/link-to}}
+  <ul>
+    {{#each project in controller itemController="project"}}
+    <li>
+    {{#if defaultBucket}}
+      {{#link-to 'bucket' project defaultBucket }}{{ project.title }}{{/link-to}}
+    {{else}}
+      {{#link-to 'project' project }}{{ project.title }}{{/link-to}}
+    {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+  {{#link-to 'projects.new'}}Create A New Project{{/link-to}}
+</div>
 {{outlet}}

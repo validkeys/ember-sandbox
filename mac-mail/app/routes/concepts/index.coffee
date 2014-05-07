@@ -1,7 +1,7 @@
-ConceptsIndexRoute = Ember.Route.extend()
+ConceptsIndexRoute = Ember.Route.extend
   
-  # renderTemplate: (controller) ->
-  #   @render 'concepts.index',
-  #     into: 'concept'
+  renderTemplate: (controller) ->
+    @render 'concepts.index',
+      into: 'concepts'
 
 `export default ConceptsIndexRoute;`
