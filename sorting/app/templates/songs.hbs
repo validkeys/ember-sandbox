@@ -1,0 +1,20 @@
+<pre>
+  {{sortProperties}}
+</pre>
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <th {{action "sortBy" "id"}}>ID</th>
+    <th {{action "sortBy" "title"}}>Title</th>
+    <th {{action "sortBy" "rating"}}>Rating</th>
+  </tr>
+  {{#each song in sortedSongs}}
+  <tr>
+    <td>{{song.id}}</td>
+    <td>{{song.title}}</td>
+    <td>{{song.rating}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+{{render 'songs/new'}}
