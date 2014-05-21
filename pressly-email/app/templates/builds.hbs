@@ -1,0 +1,9 @@
+<div id="email-wrapper">
+  <div id="email-content">
+    {{outlet}}
+  </div>
+  <div>
+    {{textarea value=html}}
+    <button {{action "generate"}}>Generate HTML</button>
+  </div>
+</div>

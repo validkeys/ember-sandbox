@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PresslyEmail</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/pressly-email.css">
+
+    <style type="text/css" media="screen">
+      html, body {
+        margin: 20px;
+        font-family: Arial;
+      }
+
+      .email-table{
+        max-width: 600px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.ENV = {{ENV}};
+    </script>
+    <script src="assets/pressly-email.js"></script>
+    <script>
+      window.PresslyEmail = require('pressly-email/app')['default'].create(ENV.APP);
+    </script>
+  </body>
+</html>

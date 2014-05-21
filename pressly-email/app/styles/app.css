@@ -1,0 +1,31 @@
+.outter-table{
+  margin: 30px auto 0 auto;
+}
+
+a.add-article{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #242424;
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.embed-input{
+  width: 90%;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 14pt;
+  padding: 5px;
+  display: block;
+  border: #ccc 1px solid;
+}
+
+td{
+  /*background-color: #eee;*/
+}
+
+.template-nav{
+  text-align: center;
+}
