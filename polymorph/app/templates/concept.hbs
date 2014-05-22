@@ -1,0 +1,18 @@
+<pre>
+  {{title}}
+
+  <strong>Comments:</strong>
+  <ul>
+  {{#each comments}}
+  <li>{{title}}</li>
+  {{else}}
+  <li>No Comments</li>
+  {{/each}}
+  </ul>
+
+</pre>
+
+<div>
+{{input type="text" value=newComment placeholder="new comment"}}
+<button {{action "save"}}>Save</button>
+</div>

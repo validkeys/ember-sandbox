@@ -1,5 +1,5 @@
 PostsNewController = Ember.ObjectController.extend
-  
+
   newBody: ''
 
   cantSubmit:(->
@@ -10,7 +10,7 @@ PostsNewController = Ember.ObjectController.extend
     createPost: ->
 
       concept = @get('concept')
-      
+
       newPost = @store.createRecord 'post',
         concept: concept
         body:    @get('newBody')

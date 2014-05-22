@@ -1,0 +1,11 @@
+<h1>Concepts:</h1>
+<ul>
+  {{#each concept in controller}}
+  <li>{{#link-to 'concept' concept}}{{concept.title}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+<div>
+Concept:
+{{outlet}}  
+</div>

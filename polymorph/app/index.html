@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MacMail</title>
+    <title>Polymorph</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
-    <link rel="stylesheet" href="assets/mac-mail.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/polymorph.css">
   </head>
   <body>
     <script>
       window.ENV = {{ENV}};
     </script>
-    <script src="assets/mac-mail.js"></script>
-    <script src="assets/vendor/ember-localstorage-adapter/localstorage_adapter.js"></script>
+    <script src="assets/polymorph.js"></script>
     <script>
-      window.MacMail = require('mac-mail/app')['default'].create(ENV.APP);
+      window.Polymorph = require('polymorph/app')['default'].create(ENV.APP);
     </script>
   </body>
 </html>
