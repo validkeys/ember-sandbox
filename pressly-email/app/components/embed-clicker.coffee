@@ -4,6 +4,16 @@ EmbedClickerComponent = Ember.Component.extend
 
   article: null
 
+  classNameBindings: ['isFeature']
+
+  format:(->
+    if @get('layoutStyle') then @get('layoutStyle') else "default"
+  ).property('layoutStyle')
+
+  formatPartial:(->
+    "layouts/partials/#{@get('format')}"
+  ).property('format')
+
   description:(->
     desc = @get('article.description')
 
@@ -13,8 +23,11 @@ EmbedClickerComponent = Ember.Component.extend
 
     return desc
 
-
   ).property('article.description')
+
+  isFeature:(->
+    @get('feature')
+  ).property('feature')
 
   showSearchField: true
 

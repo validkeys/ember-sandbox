@@ -5,10 +5,17 @@ ConceptController = Ember.ObjectController.extend
   actions:
     save: ->
       store = @get('store')
-      newComment = store.createRecord 'comment',
-        title: @get('newComment')
 
-      newComment.set 'commentable', @get('model')
+      window.deb = {
+        model: @get('model')
+      }
+
+      console.log "Current Model:", @get('model')
+
+      newComment = store.createRecord 'comment',
+        title:       @get('newComment')
+
+      # newComment.set 'commentable', @get('model')
 
       @get('model.comments').then (comments) ->
         comments.pushObject newComment

@@ -2,6 +2,8 @@ BuildsController = Ember.ObjectController.extend
 
   canGenerateHtml: false
 
+  emailTitle: ''
+
   html:(->
 
     if @get('canGenerateHtml')

@@ -1,6 +1,6 @@
 Comment = DS.Model.extend
   title: DS.attr 'string'
-  commentable: DS.belongsTo 'commentable'
+  commentable: DS.belongsTo 'commentable', polymorphic: true
 
 Comment.reopenClass
   FIXTURES: [

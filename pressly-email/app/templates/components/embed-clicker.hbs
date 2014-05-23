@@ -1,58 +1,6 @@
 {{#if showSearchField}}
   {{input type="text" name="url" value=url placeholder="Paste your URL" classNames="embed-input"}}
 {{/if}}
-
 {{#if article}}
-  {{#if feature}}
-    <table style="width: 100%;" {{action "toggle"}}>
-      <tr>
-        <td style="width: 50%;">
-          <img {{bind-attr src=article.thumbnail_url}} width="100%" />
-        </td>
-        <td style="padding-left: 20px;">
-          <table style="width: 100%;">
-            <tr>
-              <td>
-                <h1 style="font-weight: 100; padding: 0; margin: 0; font-size: 21px;">{{article.title}}</h1>
-                {{#if article.author_name}}
-                <small>by: {{ article.author_name }}</small>
-                {{/if}}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p style="font-size: 14px; line-height: 1.3em;">
-                  {{description}}
-                </p>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  {{else}}
-  <table {{action "toggle"}}>
-    <tr>
-      <td width="100%">
-        <img {{bind-attr src=article.thumbnail_url}} width="100%" />
-      </td>
-    </tr>
-    <tr>
-      <td width="100%;">
-        <h2 style="text-align: left; font-weight: 100; padding: 10px 10px 0 10px; margin: 0; font-size: 18px;">{{article.title}}</h2>
-        {{#if article.author_name}}
-        <small style="text-align: left;">by: {{ article.author_name }}</small>
-        {{/if}}
-      </td>
-    </tr>
-    <tr>
-      <td width="100%;">
-        <p style="font-size: 14px; line-height: 1.3em; padding: 0 10px;">
-          {{description}}
-        </p>
-      </td>
-    </tr>
-  </table>
-
-  {{/if}}
+  {{partial formatPartial }}
 {{/if}}

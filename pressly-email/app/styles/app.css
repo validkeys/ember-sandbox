@@ -13,13 +13,27 @@ a.add-article{
 }
 
 .embed-input{
-  width: 90%;
-  margin: 0 auto;
+  width: 95%;
+  /*margin: 0 auto;*/
   font-weight: 100;
   font-size: 14pt;
   padding: 5px;
   display: block;
   border: #ccc 1px solid;
+}
+
+.is-feature .embed-input{
+  width: 98%;
+}
+
+.double-tile td:nth-of-type(2) input{
+  float: right;
+}
+
+.double-tile td:nth-of-type(2) input :after{
+  content: '';
+  display: block;
+  clear: both;
 }
 
 td{
