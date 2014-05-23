@@ -1,8 +1,10 @@
 <div class="template-nav">
-<h2 id='title'>Pick A Template</h2>
-{{#link-to "builds.build" "a"}}Template A{{/link-to}}
-{{#link-to "builds.build" "b"}}Template B{{/link-to}}
-{{#link-to "builds.build" "c"}}Template C{{/link-to}}
+  <h2 id='title'>Pick A Template</h2>
+  <ul>
+    <li>{{#link-to "builds.build" "a" activeClass="active"}}The Rina{{/link-to}}</li>
+    <li>{{#link-to "builds.build" "b" activeClass="active"}}The Jeff{{/link-to}}</li>
+    <li>{{#link-to "builds.build" "c" activeClass="active"}}The Liam{{/link-to}}</li>
+  </ul>
 </div>
 <div id="email-output">
   {{outlet}}

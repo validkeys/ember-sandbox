@@ -7,7 +7,7 @@ EmailBaseView = Ember.View.extend
   attributeBindings: ['style']
 
   style:(->
-    "max-width: 600px; width: 100%; margin: 30px auto 0 auto;"
+    "max-width: 600px; width: 100%; margin: 30px auto 0 auto; font-family: 'Arial';"
   ).property()
 
   # attributes: ["style="]
