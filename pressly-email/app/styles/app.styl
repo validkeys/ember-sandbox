@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  width: 100%;
+  height: 100%;
+}
+
+
+.full-height{
+  height: 100%;
+}
+
+.email-table{
+  max-width: 600px;
+  width: 100%;
+}
+
+.outter-table{
+  margin: 30px auto 0 auto;
+}
+
+a.add-article{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #242424;
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.embed-input{
+  width: 95%;
+  font-weight: 100;
+  font-size: 14pt;
+  padding: 5px;
+  display: block;
+  border: #ccc 1px solid;
+}
+
+.is-feature .embed-input{
+  width: 98%;
+}
+
+.double-tile td:nth-of-type(2) input{
+  float: right;
+}
+
+.double-tile td:nth-of-type(2) input :after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+#email-output{
+  height: 100%;
+}
+#email-wrapper{ width: 100%; height: 100%; display: table;}
+
+
+
+#email-content{
+  display: table-cell;
+}
+
+@import 'application'
+@import 'menu'
+@import 'leftpane'
+
+@import 'components/double-tile'
+@import 'components/triple-tile'
+@import 'components/full-row'
+
+@import 'articles/default'
+@import 'articles/smartphone-block'

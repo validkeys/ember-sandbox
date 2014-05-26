@@ -1,13 +1,13 @@
-<table style="width: 100%; padding-bottom: 20px;" {{action "toggle"}}>
+<table class="smartphone-block-article" {{action "toggle"}}>
   <tr>
-    <td width="33%" style="background-image: url({{unbound article.thumbnail_url}}); background-size: cover; background-position: center center; backgroud-repeat: no-repeat;">
+    <td class="image-cell" style="background-image: url({{unbound article.thumbnail_url}});">
     </td>
-    <td style="padding-left: 20px;">
-      <h2 style="text-align: left; font-weight: bold; line-height: 25px; color: #000; padding: 10px 10px 0 0px; margin: 0; font-size: 19px;">{{article.title}}</h2>
+    <td class="text-cell">
+      <h2 class="article-heading">{{article.title}}</h2>
       {{#if article.author_name}}
-      <small style="text-align: left; padding: 10px 10px 0 0px; font-size: 13px; font-weight: regular; line-height: 20px; color: #586d7b;">by: {{ article.author_name }}</small>
+      <small class="byline">by: {{ article.author_name }}</small>
       {{/if}}
-      <p style=" font-size: 13px; font-weight: regular; line-height: 20px; color: #586d7b; padding: 10px 10px 0 0;">
+      <p class="description">
         {{description}}
       </p>
     </td>
