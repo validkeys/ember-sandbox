@@ -6,6 +6,12 @@ EmbedClickerComponent = Ember.Component.extend
 
   classNameBindings: ['isFeature']
 
+  attributeBindings: ['style']
+
+  style:(->
+    "position: relative;"
+  ).property()
+
   format:(->
     if @get('layoutStyle') then @get('layoutStyle') else "default"
   ).property('layoutStyle')
