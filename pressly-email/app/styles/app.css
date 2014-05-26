@@ -6,6 +6,20 @@ html, body {
   height: 100%;
 }
 
+.kyle-wins{
+  background-image: url(http://mediasvc.ancestry.com/image/736c69f6-6f98-4cc8-b3b1-9890e97bd230.jpg?Client=MCCManager&NamespaceID=1093&MaxSide=160);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -o-border-radius: 150px;
+  width: 100px;
+  height: 100px;
+}
+
 .full-height{
   height: 100%;
 }
