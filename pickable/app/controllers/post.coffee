@@ -1,9 +1,5 @@
 PostController = Ember.ObjectController.extend
 
-  init: ->
-    @_super()
-    window.pc = @
-
   selectedLabels:(->
     @get('labeled_items').map (item) ->
       item.get('label')
