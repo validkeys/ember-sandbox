@@ -1,7 +1,7 @@
 <a style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class="cover-link" {{bind-attr href=article.url}} target="_blank"></a>
-<table style="width: 100%; padding-bottom: 20px;" {{action "toggle"}}>
+<table class="smartphone-block-article" style="width: 100%; padding-bottom: 20px;" {{action "toggle"}}>
   <tr>
-    <td class="image-cell" style="background-image: url({{unbound article.thumbnail_url}});">
+    <td class="image-cell" {{bind-attr style=smartphoneImageBlockStyle}}>
     </td>
     <td class="text-cell">
       <h2 class="article-heading">{{article.title}}</h2>

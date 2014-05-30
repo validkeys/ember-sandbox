@@ -64,6 +64,41 @@ a.add-article{
   display: table-cell;
 }
 
+.html-output
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 10
+  background: #fff
+  overflow-x: hidden
+  overflow-y: scroll
+
+
+.html-output pre
+  padding: 5%
+  margin: 0 auto
+  overflow-x: hidden
+
+
+.html-output a.close-modal
+  position: absolute
+  top: 0
+  right: 0
+  background: #000
+  color: #fff
+  font-size: 40pt
+  padding: 10px 22px
+  font-weight: 100
+  text-decoration: none
+
+
+a.cover-link
+  background: red;
+  display: none;
+
+
 @import 'application'
 @import 'menu'
 @import 'leftpane'

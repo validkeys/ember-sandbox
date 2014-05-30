@@ -12,6 +12,14 @@ EmbedClickerComponent = Ember.Component.extend
     "position: relative;"
   ).property()
 
+  defaultImageCellStyle:(->
+    "background-image: url(#{@get('article.thumbnail_url')}); padding-bottom: 10px; height: 300px; background-repeat: no-repeat; background-size: cover; background-position: center center;"
+  ).property('article.thumbnail_url')
+
+  smartphoneImageBlockStyle:(->
+    "background-image: url(#{@get('article.thumbnail_url')}); background-repeat: no-repeat; background-size: cover; background-position: center center;"
+  ).property('article.thumbnail_url')
+
   format:(->
     if @get('layoutStyle') then @get('layoutStyle') else "default"
   ).property('layoutStyle')
