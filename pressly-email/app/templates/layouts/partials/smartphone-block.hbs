@@ -3,12 +3,12 @@
   <tr>
     <td class="image-cell" {{bind-attr style=smartphoneImageBlockStyle}}>
     </td>
-    <td class="text-cell">
-      <h2 class="article-heading">{{article.title}}</h2>
+    <td class="text-cell" style="padding-left: 20px;">
+      <h2 class="article-heading" style="text-align: left;font-weight: bold;line-height: 25px;color: #000;padding: 10px 10px 0 0px;margin: 0;font-size: 19px;">{{article.title}}</h2>
       {{#if article.author_name}}
-      <small class="byline">by: {{ article.author_name }}</small>
+      <small style="text-align: left;padding: 10px 10px 0 0px;font-size: 13px;font-weight: regular;line-height: 20px;color: #586d7b;" class="byline">by: {{ article.author_name }}</small>
       {{/if}}
-      <p class="description">
+      <p style="font-size: 13px;font-weight: regular;line-height: 20px;color: #586d7b;padding: 10px 10px 0 0;" class="description">
         {{description}}
       </p>
     </td>

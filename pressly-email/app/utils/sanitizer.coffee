@@ -10,6 +10,7 @@ sanitizer = new Sanitize(
     h2: ['style','width','height']
     p: ['style','width','height']
     img: ['src','width','height','style']
+    small: ['style']
 )
 
 `export default sanitizer`

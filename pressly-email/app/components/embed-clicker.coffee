@@ -17,7 +17,7 @@ EmbedClickerComponent = Ember.Component.extend
   ).property('article.thumbnail_url')
 
   smartphoneImageBlockStyle:(->
-    "background-image: url(#{@get('article.thumbnail_url')}); background-repeat: no-repeat; background-size: cover; background-position: center center;"
+    "background-image: url(#{@get('article.thumbnail_url')}); background-repeat: no-repeat; background-size: cover; background-position: center center; width: 33%;"
   ).property('article.thumbnail_url')
 
   format:(->
