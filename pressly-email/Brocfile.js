@@ -19,6 +19,7 @@ app.import('vendor/embedly-jquery/jquery.embedly.js');
 app.import('vendor/sanitize.js/lib/sanitize.js');
 app.import('vendor/js-beautify/js/lib/beautify.js');
 app.import('vendor/js-beautify/js/lib/beautify-html.js');
+app.import('vendor/highlight.js/src/styles/github.css');
 
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an

@@ -9,3 +9,10 @@
 <div id="email-output">
   {{outlet}}
 </div>
+
+{{#if showingHtml}}
+<div class="html-output">
+  <a href="#" {{action "closeModal"}} class="close-modal">X</a>
+  {{outlet "html"}}
+</div>
+{{/if}}

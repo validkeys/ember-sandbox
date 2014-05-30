@@ -1,6 +1,6 @@
-BuildIndexRoute = Ember.Route.extend
+BuildsIndexRoute = Ember.Route.extend
 
   redirect: ->
     @transitionTo 'builds.build', 'a'
 
-`export default BuildIndexRoute;`
+`export default BuildsIndexRoute;`
