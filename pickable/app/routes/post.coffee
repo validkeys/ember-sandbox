@@ -1,12 +1,22 @@
 PostRoute = Ember.Route.extend
 
   model: (params) ->
-    Ember.RSVP.hash
-      post: @store.find 'post', params.post_id
-      labels: @store.find 'label'
+    @store.find('post',params.post_id)
 
+  # set this stuff up on the setupController
+  # instead of the model because the model hook
+  # is not called in the transition to when the model
+  # is already passed
   setupController: (controller, model) ->
-    controller.set 'model', model.post
-    controller.set 'labels', model.labels
+
+    labeledItems = model.get('labeled_items')
+    labels = @store.find('label')
+
+    Ember.RSVP.all([labeledItems, labels]).then (vals) ->
+
+      controller.set 'labeled_items', vals[0]
+      controller.set 'model',  model
+      controller.set 'labels', vals[1]
+
 
 `export default PostRoute;`

@@ -1,6 +1,6 @@
 Label = DS.Model.extend
   title: DS.attr 'string'
-  labeled_items: DS.hasMany 'labeled_item'
+  labeled_items: DS.hasMany 'labeled_item', async: true
 
 Label.reopenClass
   FIXTURES:[

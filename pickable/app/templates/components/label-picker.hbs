@@ -1,5 +1,13 @@
 <h4>Label Baby Junior</h4>
 
+<strong>PICKABLES:</strong>
+<ul>
+  {{#each item in pickables}}
+  <li {{action "pick" item}}>{{item.key.title}} {{item.isPicked}}</li>
+  {{/each}}
+</ul>
+
+
 <strong>ITEMS:</strong>
 <ul>
   {{#each item in items}}
@@ -11,12 +19,5 @@
 <ul>
   {{#each label in selected}}
   <li>{{label.title}}</li>
-  {{/each}}
-</ul>
-
-<strong>PICKABLES:</strong>
-<ul>
-  {{#each item in pickables}}
-  <li {{action "pick" item}}>{{item.key.title}} {{item.isPicked}}</li>
   {{/each}}
 </ul>
