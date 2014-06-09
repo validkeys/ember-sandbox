@@ -8,6 +8,8 @@ EmbedClickerComponent = Ember.Component.extend
 
   attributeBindings: ['style']
 
+  utms: ''
+
   style:(->
     "position: relative;"
   ).property()
@@ -44,6 +46,19 @@ EmbedClickerComponent = Ember.Component.extend
   ).property('feature')
 
   showSearchField: true
+
+  printUrl:(->
+    articleUrl = @get('article.url')
+    utms       = @get('utms')
+
+    if Ember.isEmpty(utms)
+      articleUrl
+    else
+      if articleUrl.indexOf("?") > -1
+        "#{articleUrl}&#{utms}"
+      else
+        "#{articleUrl}?#{utms}"
+  ).property('article.url','utms')
 
   performSearch: ->
 

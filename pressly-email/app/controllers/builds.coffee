@@ -7,6 +7,24 @@ BuildsController = Ember.ObjectController.extend
 
   emailBody: ''
 
+  utmCampaignName: ''
+  utmCampaignSource: ''
+  utmMedium: ''
+  utmContent: ''
+
+  utmString:(->
+
+    strArray = []
+
+    strArray.push("utm_campaign=#{@get('utmCampaignName')}") if !Ember.isEmpty(@get('utmCampaignName'))
+    strArray.push("utm_source=#{@get('utmCampaignSource')}") if !Ember.isEmpty(@get('utmCampaignSource'))
+    strArray.push("utm_medium=#{@get('utmMedium')}") if !Ember.isEmpty(@get('utmMedium'))
+    strArray.push("utm_content=#{@get('utmContent')}") if !Ember.isEmpty(@get('utmContent'))
+
+    strArray.join("&")
+
+  ).property('utmCampaignName','utmCampaignSource','utmMedium','utmContent')
+
   wrapperHtml:(->
 
     str = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

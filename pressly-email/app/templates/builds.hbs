@@ -4,6 +4,13 @@
       <h1>CONFIGURE</h1>
       {{input type="text" value=emailTitle placeholder="Enter your title"}}
       {{textarea value=emailBody placeholder="Enter some context"}}
+
+      <h2>UTM Parameters <small>* Optional</small></h2>
+
+      {{input type="text" value=utmCampaignName placeholder="UTM Camaign Name"}}
+      {{input type="text" value=utmCampaignSource placeholder="UTM Camaign Source (ex. newsletter)"}}
+      {{input type="text" value=utmMedium placeholder="UTM Medium (ex. email)"}}
+      {{input type="text" value=utmContent placeholder="UTM Content (ex. 20140101-sales-team)"}}
     </div>
     <div class="html-printout">
       <button {{action "generate"}}>Generate HTML</button>
