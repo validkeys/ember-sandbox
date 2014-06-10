@@ -1,0 +1,11 @@
+<h1>Select A Project you'd like to work on:</h1>
+<ul>
+  {{#each project in controller}}
+  <li>
+    {{#link-to 'bucket' project 'default'}}{{ project.title }}{{/link-to}}
+    <p>{{ project.description }}</p>
+  </li>
+  {{/each}}
+</ul>
+
+{{! outlet }}

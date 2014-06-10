@@ -1,0 +1,84 @@
+.sidebar
+  background: $sidebar-bg-color
+  color:      $sidebar-font-color
+  min-height: 100%
+  text-align: center !important
+
+  h5.heading
+    color: lighten($sidebar-bg-color, 35%) !important
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: capitalize
+    font-size: 1.2em
+
+  .segment
+    background-color: transparent !important
+
+  .divider
+    i
+      color: $sidebar-font-color
+
+    &:before
+      border-top:     lighten($sidebar-bg-color, 15%) 1px solid !important
+      border-bottom:  lighten($sidebar-bg-color, 15%) 0px solid !important
+
+    &:after
+      border-top:     lighten($sidebar-bg-color, 15%) 1px solid !important
+      border-bottom:  lighten($sidebar-bg-color, 15%) 0px solid !important
+
+  .ui.secondary.pointing.menu
+    &.filter-menu
+      border-bottom: none !important
+      
+      .item
+        color:          $sidebar-font-color !important
+        font-weight:    100
+        letter-spacing: 1px
+        text-transform: uppercase
+        
+        &.active
+          border-right: none !important
+          border-left:  $active-color 3px solid
+
+
+    &.column-top-nav
+      border:       none !important
+      margin-bottom: 2rem !important
+
+      .table-cell
+        width:          50%
+        padding:        1rem 0
+        text-align:     center
+        border-bottom:  lighten($sidebar-bg-color, 15%) 1px solid
+
+        &:first-child
+          border-right: lighten($sidebar-bg-color, 15%) 1px solid
+
+        &.menu-icon
+          .item
+            padding:    0
+          i
+            font-size:  20pt
+            color:      #fff
+
+      .item
+        color:          $sidebar-font-color !important
+        font-weight:    100
+        letter-spacing: 1px
+        text-transform: uppercase
+
+        &.active
+          border: none
+
+.search-container
+  border-bottom: rgba(0,0,0,.1) 1px solid
+  &.input
+    input
+      border: none !important
+      font-weight: 300
+      letter-spacing: 1px
+      padding-left: 0
+
+    .icon
+      font-weight: 100
+      color: #ccc

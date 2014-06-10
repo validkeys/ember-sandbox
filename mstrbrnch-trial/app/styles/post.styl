@@ -1,0 +1,103 @@
+.post-detail-item
+  // margin-bottom: 50px !important
+  // border-bottom:  $border-color
+  .post-block-left
+    
+    .post-block-user-pic
+      margin: 0 auto
+    .author
+      text-align:   center
+      display:      block
+      color:        #ccc
+      padding-top:  5px
+
+  .post-block-right
+    vertical-align: middle !important
+
+    .child-count
+      background:     red
+      color:          #fff
+      text-align:     center
+      display:        block
+      border-radius:  100px
+      width:          30px
+      line-height:    30px
+      vertical-align: middle
+      transition:     background 250ms ease
+
+  .secondary-column
+    background: blue
+    height:     100%
+
+
+  &:hover
+    .post-block-right
+      .child-count
+        background:     green
+
+
+
+.post-block
+  transition:     background 500ms ease
+  border-radius:  1px
+  font-weight: 100
+  
+  .inner
+    padding:  0 0 40px
+    position: relative
+    background:     #fefefe
+
+    header
+      background:     #f6f6f6
+      padding:        20px 0
+      color:          #ccc
+      text-transform: uppercase
+      font-size:      12px
+      letter-spacing: 1px
+      border-bottom:  rgba(0,0,0,.1) 1px solid
+
+      .table-cell
+        width: 50%
+
+        &.right
+          text-align:     right
+          padding-right:  40px
+
+        &.left
+          text-align: left
+          padding-left: 40px
+
+          .user-attribution
+            .table-cell
+              width: auto
+            .user-image
+              width:    50px
+              height:   50px
+
+              .circle-image
+                width:  100%
+                height: 100%
+
+            .user-data
+              padding-left: 1em
+
+              strong
+                display: block
+
+      small
+        text-align: left
+
+      .management-box
+        text-align: right
+
+        .js-edit
+          padding-left: 15px
+          padding-right: 15px
+
+        .ui.buttons
+          .or:before
+            color: #fff
+
+      .table-cell
+        width: 50%
+

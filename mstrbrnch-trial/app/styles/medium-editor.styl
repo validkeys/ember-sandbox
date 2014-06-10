@@ -1,0 +1,17 @@
+.medium-editor-placeholder:after
+  color:        #ccc
+  font-weight:  100
+  font-family:  $main-font-family
+
+.medium-editor-toolbar
+  background-color: $active-color
+
+  li
+    button
+      border-right: lighten($active-color, 30%) 1px solid
+
+    .medium-editor-button-active
+      background-color: darken($active-color, 25%)
+
+.medium-toolbar-arrow-under:after
+  border-color: $active-color transparent transparent transparent

@@ -1,0 +1,11 @@
+<h1>Add a new concept to {{ project.title }}</h1>
+
+<em>This concept will appear in: {{ defaultBucket.name }}. This is the default bucket for new concepts to {{ project.title }}</em>
+
+<label>Input!</label>
+{{input type="text" value=newTitle }}
+
+<label>Body!</label>
+{{textarea value=newBody }}
+
+<button {{action "createConcept"}}>Create</button>

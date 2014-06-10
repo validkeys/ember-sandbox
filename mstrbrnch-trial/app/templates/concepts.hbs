@@ -1,0 +1,10 @@
+<ul>
+{{#each controller}}
+  {{#link-to 'concept' this tagName="li"}}
+    <h5>{{ title }}</h5>
+    <p>{{ description }}</p>
+  {{/link-to}}
+{{/each}}
+</ul>
+
+{{ outlet }}

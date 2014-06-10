@@ -1,0 +1,10 @@
+<h5>MENU:</h5>
+
+Projects:
+<ul>
+  {{#each projects}}
+    <li>{{#link-to 'bucket' this 'default'}}{{ title }}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{ test }}

@@ -1,0 +1,64 @@
+.composer-region
+  background: #fafafa
+
+  .composer-container
+    width:  90%
+    margin: auto
+
+    .editable
+      h1,h2,h3,h4,h5,p,blockquote
+        padding: 0 0px
+    
+    .form-title
+      input
+        background:     transparent
+        border-left:    none
+        border-right:   none
+        border-top:     none
+        color:          #000
+        font-size:      30px
+        border-radius:  0
+        padding-left:   0
+        font-weight:    bold
+
+    .form-submit
+      text-align: center
+      .positive.button
+        background-color: $active-color !important
+
+.editable
+  width:      100%
+
+  font-weight: normal
+  font-size: 20px
+  line-height: 1.3em
+  padding-bottom: 40px
+
+  h1,h2,h3,h4,h5,p,blockquote
+    padding: 0 40px
+
+  p
+    line-height: 1.5em
+    font-weight: 100
+    letter-spacing: 1px
+
+  blockquote
+    border-left:  $accent-color 5px solid
+    padding-left: 40px
+    display: block
+    margin-top: 50px !important
+    margin-bottom: 50px !important
+    color: #595959
+    font-style: italic
+    letter-spacing: 1px
+    font-family: 'georgia'
+    font-weight: 100 !important
+
+  &:focus
+    outline: none
+
+  h3
+    font-size:      35px
+    font-weight:    100
+    text-transform: uppercase
+    line-height:    1.3em        

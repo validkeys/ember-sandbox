@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<p>{{ description }}</p>
+<h3>Posts:</h3>
+
+
+{{#each posts}}
+  <p>{{ body }}</p>
+{{else}}
+  <p>No Posts!</p>
+{{/each}}

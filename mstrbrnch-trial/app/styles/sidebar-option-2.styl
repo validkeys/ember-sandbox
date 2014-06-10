@@ -1,0 +1,51 @@
+.sidebar.one.column
+  background-color: $sidebar-bg-color
+  padding:          0 !important
+
+  .menu
+    background: none !important
+    
+    .item
+      color:        $sidebar-font-color !important
+      font-weight:    100px
+      border-bottom:  lighten($sidebar-bg-color, 10%) 1px solid
+      transition:     color 250ms ease, border-color 250ms ease
+
+      i
+        transition: opacity 250ms ease
+        opacity:      .3
+
+      span
+        font-size:  12px
+        color:      rgba($sidebar-font-color, .3) !important
+        letter-spacing: 1px
+        text-transform: uppercase
+        font-weight: 100
+
+      &.active
+        box-shadow:   none
+        border-color: $active-color !important
+
+        i
+          opacity: 1
+
+        &:after
+          background-color: #fff
+          border:           none
+          right:            -0.3em
+
+      &:hover
+        i
+          opacity: 1
+
+.post-create-layout
+  .sidebar.one.column
+    background: darken(#fafafa, 5%)
+    border-right: darken(#fafafa, 5%) 1px solid !important
+    .menu
+      box-shadow: none
+      .item
+        color: #000 !important
+        border-bottom: darken(#fafafa, 5%) 1px solid !important
+        span
+          color: #000 !important
