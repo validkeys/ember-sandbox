@@ -34,14 +34,17 @@
     <div id="qunit-fixture"></div>
 
     <script>
-      window.ENV = {{ENV}};
+      window.PresslyEmailENV = {{ENV}};
+      window.EmberENV = window.PresslyEmailENV.EmberENV;
     </script>
     <script src="assets/qunit.js"></script>
+    <script src="assets/qunit-notifications.js"></script>
+    <script src="assets/vendor.js"></script>
     <script src="assets/pressly-email.js"></script>
     <script src="testem.js"></script>
     <script>
       require('pressly-email/tests/test-helper');
-      require('pressly-email/tests/test-loader');
     </script>
+    <script src="assets/test-loader.js"></script>
   </body>
 </html>

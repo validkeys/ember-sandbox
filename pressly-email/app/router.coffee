@@ -1,5 +1,7 @@
+`import Ember from 'ember';`
+
 Router = Ember.Router.extend
-  location: ENV.locationType
+  location: PresslyEmailENV.locationType
 
 Router.map ->
   @resource 'layouts', path: '/layouts', ->
