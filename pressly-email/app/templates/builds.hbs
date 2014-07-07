@@ -18,16 +18,22 @@
   </div>
 
   <div id="email-content">
-    {{#view "layouts/emailbase"}}
-    <tr>
-      <td>
-        <div style="width: 600px; margin: 40px auto 0 auto; font-family: 'Arial';">
-          <h1 style="border-bottom: #000 1px solid; padding-bottom: 20px; margin-bottom: 20px; font-size: 26px; line-height: 1.3em;">{{emailTitle}}</h1>
-          <p style="font-size: 15px; line-height:1.5em; padding: 10px 0;">{{emailBody}}</p>
-        </div>        
-      </td>
-    </tr>
-    {{outlet}}
-    {{/view}}
+    <table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
+      <tr>
+        <td align="center" valign="top">
+          {{#view "layouts/emailbase"}}
+          <tr>
+            <td align="left">
+              <div style="width: 600px; margin: 40px auto 0 auto; font-family: 'Arial'; text-align: left;">
+                <h1 style="border-bottom: #000 1px solid; padding-bottom: 20px; margin-bottom: 20px; font-size: 26px; line-height: 1.3em;">{{emailTitle}}</h1>
+                <p style="font-size: 15px; line-height:1.5em; padding: 10px 0;">{{emailBody}}</p>
+              </div>
+            </td>
+          </tr>
+          {{outlet}}
+          {{/view}}
+        </td>
+      </tr>
+    </table>
   </div>
 </div>

@@ -37,7 +37,7 @@ BuildsController = Ember.ObjectController.extend
 
     </head>
 
-    <body style="width: 600px; margin: 30px auto 0 auto; font-family: \'Arial\';">
+    <body style="font-family: \'Arial\';">
     [[INSERT-EMAIL]]
     </body>
     </html>';

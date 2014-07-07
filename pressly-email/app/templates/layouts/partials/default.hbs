@@ -1,7 +1,8 @@
 <a style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class="cover-link" {{bind-attr href=printUrl}} target="_blank"></a>
-<table style="width: 100%; padding-bottom: 40px;" {{action "toggle"}}>
+<table width="100%;" style="width: 100%; padding-bottom: 40px;" {{action "toggle"}}>
   <tr>
-    <td class="default-image-container" width="100%" {{bind-attr style=defaultImageCellStyle}}>
+    <td class="default-image-container" width="100%">
+      <img width="100%" {{{bind-attr src=imageSource}}} alt="" />
     </td>
   </tr>
   <tr>
