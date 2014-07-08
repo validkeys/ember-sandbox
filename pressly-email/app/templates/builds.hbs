@@ -15,6 +15,13 @@
     <div class="html-printout">
       <button {{action "generate"}}>Generate HTML</button>
     </div>
+    <hr>
+    <div class="email-direct">
+      {{input type="text" value=emails placeholder="Enter comma separated list"}}
+      {{#if canEmail}}
+      <button {{action "email"}}>Email</button>
+      {{/if}}
+    </div>
   </div>
 
   <div id="email-content">
