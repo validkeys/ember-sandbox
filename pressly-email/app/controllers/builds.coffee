@@ -117,7 +117,7 @@ BuildsController = Ember.ObjectController.extend
 
 
       body =
-        sender:     "sender@gmail.com"
+        sender:     "sender@pressly.com"
         recipients: @get('addressList')
         subject:    @get('emailTitle')
         template_id: "fad39f43-a733-4e2a-96ce-0412708dac32"
