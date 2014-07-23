@@ -1,22 +1,11 @@
 <table class="smartphone-block-article" style="width: 100%; padding-bottom: 20px;" {{action "toggle"}}>
   <tr>
     <td class="image-cell" {{bind-attr width=width}} {{bind-attr style=smartphoneImageBlockStyle}}>
-      <a class="cover-link" {{bind-attr href=article.url}} target="_blank">
-        <img width="100%" {{{bind-attr src=imageSource}}} alt="" />
-      </a>
+      {{partial "layouts/partials/wrapped-image"}}
     </td>
     <td width="402" class="text-cell" style="padding-left: 20px; width: 402px;">
-      <a class="cover-link" {{bind-attr href=article.url}} target="_blank">
-        <h2 class="article-heading" style="text-align: left;font-weight: bold; line-height: 25px; color: #000;padding: 10px 10px 0 0px;margin: 0;font-size: 19px;">
-        {{#if article.author_name}}
-        <span style="font-size: 12px; line-height: 12px; text-transform: uppercase; letter-spacing: .1em; margin: 0; padding: 0; display: block; font-weight: 100;">{{ article.author_name }}</span><br>
-        {{/if}}
-        <a {{bind-attr href=article.url}} border="none" style="text-decoration: none; color: #000;">{{article.title}}</a>
-        </h2>
-      </a>
-      <p style="font-size: 13px;font-weight: regular;line-height: 20px;color: #586d7b;padding: 10px 10px 0 0;" class="description">
-        {{description}}
-      </p>
+      {{partial "layouts/partials/wrapped-heading"}}
+      {{partial "layouts/partials/description-block"}}
     </td>
   </tr>
 </table>
