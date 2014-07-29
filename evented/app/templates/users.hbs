@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<ul>
+  {{#each user in controller}}
+    <li>{{user.name}}</li>
+  {{else}}
+    <li>No Users</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

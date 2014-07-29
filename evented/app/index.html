@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evented</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/evented.css">
+  </head>
+  <body>
+    <script>
+      window.EventedENV = {{ENV}};
+      window.EmberENV = window.EventedENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/evented.js"></script>
+    <script>
+      window.Evented = require('evented/app')['default'].create(EventedENV.APP);
+    </script>
+  </body>
+</html>
