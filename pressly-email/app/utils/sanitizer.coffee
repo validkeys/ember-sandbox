@@ -2,9 +2,9 @@ sanitizer = new Sanitize(
   elements: ['a','p','b','u','i','em','h1','h2','h3','h4','h5','h6','blockquote','table','tr','td','img','small','span','div']
   attributes:
     a: ['href','title','style']
-    table: ['style','width','height']
-    tr: ['style','width','height']
-    td: ['style','width','height','colspan']
+    table: ['style','width','height','cellspacing','cellpadding','align','valign']
+    tr: ['style','width','height','cellspacing','cellpadding','align','valign']
+    td: ['style','width','height','colspan','cellspacing','cellpadding','align','valign']
     h1: ['style','width','height']
     div: ['style','width','height']
     h2: ['style','width','height']

@@ -6,20 +6,28 @@ EmbedClickerComponent = Ember.Component.extend
 
   classNameBindings: ['isFeature']
 
-  attributeBindings: ['style']
+  attributeBindings: ['style','width']
 
   utms: ''
+
+  width: 198
 
   style:(->
     "position: relative;"
   ).property()
 
+  imageSource:(->
+    width = @get('imageWidth')
+    height = width * (9/16)
+    "http://imgry.pressly.com/529dfe4b6461733d2e280000/fetch?op=balance&size=#{width}x#{height}&url=" + encodeURIComponent(@get('article.thumbnail_url'))
+  ).property('article.thumbnail_url')
+
   defaultImageCellStyle:(->
-    "background-image: url(#{@get('article.thumbnail_url')}); padding-bottom: 10px; height: 300px; background-repeat: no-repeat; background-size: cover; background-position: center center;"
+    "padding-bottom: 10px; height: 300px;"
   ).property('article.thumbnail_url')
 
   smartphoneImageBlockStyle:(->
-    "background-image: url(#{@get('article.thumbnail_url')}); background-repeat: no-repeat; background-size: cover; background-position: center center; width: 33%;"
+    "width: 198px;"
   ).property('article.thumbnail_url')
 
   format:(->
