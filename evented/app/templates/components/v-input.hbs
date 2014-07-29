@@ -1,7 +1,7 @@
 {{input type="text" name=name value=value classNames=classNames}}
 
 {{#if errors}}
-  <ul>
+  <ul class="v-errors">
     {{#each error in errors}}
       <li>{{error}}</li>
     {{/each}}

@@ -46,6 +46,14 @@ test('edit user', function(){
   visit('/users/1/edit').then(function(){
     fillIn('.spec-fn','')
   }).then(function(){
-    // ...
+    ok(find('.v-errors').length, "Found the errors");
+  })
+});
+
+test('a user shouldnt be able to save when one or more of the fields is invalid', function(){
+  visit("/users/1/edit").then(function(){
+    fillIn('.spec-fn', "")
+  }).then(function(){
+    ok(find('.spec-submit').attr("disabled"), "Button is disabled")
   })
 });
