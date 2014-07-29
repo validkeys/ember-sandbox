@@ -44,6 +44,8 @@ test('visiting /users', function() {
 
 test('edit user', function(){
   visit('/users/1/edit').then(function(){
-    console.log("HERE");
-  });
+    fillIn('.spec-fn','')
+  }).then(function(){
+    // ...
+  })
 });

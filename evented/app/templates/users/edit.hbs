@@ -1,5 +1,5 @@
 <div>
-  <div>{{input type="text" value=first_name}}</div>
-  <div>{{input type="text" value=last_name}}</div>
+  <div>{{v-input classNames="spec-fn" value=first_name name="first_name" model=model}}</div>
+  <div>{{input type="text" classNames="spec-ln" value=last_name}}</div>
   <button {{action "edit"}}>Submit</button>
 </div>

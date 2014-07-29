@@ -10,3 +10,13 @@ test('it exists', function() {
   // var store = this.store();
   ok(model);
 });
+
+test('it requires a first name', function() {
+  var model = this.subject({
+    first_name: "",
+    last_name: "Davis"
+  });
+
+  equal(model.get('isValid'), false, "Model is invalid");
+
+});
