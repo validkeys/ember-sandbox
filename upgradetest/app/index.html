@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upgradetest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/upgradetest.css">
+  </head>
+  <body>
+    <script>
+      window.UpgradetestENV = {{ENV}};
+      window.EmberENV = window.UpgradetestENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/upgradetest.js"></script>
+    <script>
+      window.Upgradetest = require('upgradetest/app')['default'].create(UpgradetestENV.APP);
+    </script>
+  </body>
+</html>
