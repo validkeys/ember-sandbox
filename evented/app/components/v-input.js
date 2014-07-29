@@ -23,5 +23,9 @@ export default Ember.Component.extend({
 
   didInsertElement: function(){
     this.addObserver("model.errors." + this.get('name'), this.updateErrors);
+  },
+
+  willDestroyElement: function(){
+    this.removeObserver("model.errors." + this.get('name'), this.updateErrors);
   }
 });
