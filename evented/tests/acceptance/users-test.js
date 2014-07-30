@@ -43,10 +43,25 @@ test('visiting /users', function() {
 });
 
 test('edit user', function(){
+  var errors = {
+    errors: {
+      "first_name": ["you must do"]
+    }
+  }
+  server.put('/api/users/1', function(r){
+    return [422, {"Content-Type":"application/json"}, JSON.stringify(errors)];
+  });
+
   visit('/users/1/edit').then(function(){
-    fillIn('.spec-fn','')
+    fillIn('.spec-fn','');
   }).then(function(){
     ok(find('.v-errors').length, "Found the errors");
+  }).then(function(){
+    fillIn('.spec-fn','Klaus');
+    fillIn('.spec-ln','');
+  }).then(function(){
+    equal(find('.v-errors').length, 0, "Errors are gone");
+    click('.spec-submit');
   })
 });
 

@@ -8,6 +8,14 @@ export default Ember.ObjectController.extend({
     } else {
       console.log("My model became invalid by observing the isValid property on the model");
     }
-  }.observes('model.isValid')
+  }.observes('model.isValid'),
+
+  // validations:{
+  //   first_name: {
+  //     presence: {
+  //       message: "Please enter a first name"
+  //     }
+  //   }
+  // }  
 
 });

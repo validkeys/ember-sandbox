@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validations</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+  <script type="text/javascript" src="jquery.validity.js"></script>
+</head>
+<body>
+<input id="title-field" type="text" name="title" required/>
+<script type="text/javascript">
+  $.validity.outputs.label = {}; //noop
+  $.validity.outputs.tooltip = {}; //noop
+  $.validity.start();
+  $('#title-field').require();
+  var result = $.validity.end();
+  console.log(result);
+</script>
+</body>
+</html>

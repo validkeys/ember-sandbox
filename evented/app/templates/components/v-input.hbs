@@ -1,5 +1,8 @@
 {{input type="text" name=name value=value classNames=classNames}}
 
+<h1>Is Valid: {{model.isValid}}</h1>
+
+
 {{#if errors}}
   <ul class="v-errors">
     {{#each error in errors}}
