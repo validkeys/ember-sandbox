@@ -1,21 +1,17 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
+export default Ember.ObjectController.extend( Ember.Validations.Mixin, {
 
-  invalidationTest: function() {
-    if (this.get('model.isValid')){
-      console.log("My model became valid by observing the isValid property on the model");
-    } else {
-      console.log("My model became invalid by observing the isValid property on the model");
+  validations: {
+    firstName: {
+      presence: {
+        message: "Hello MOTO"
+      }
+    },
+    lastName: {
+      presence: true
     }
-  }.observes('model.isValid'),
+  }
 
-  // validations:{
-  //   first_name: {
-  //     presence: {
-  //       message: "Please enter a first name"
-  //     }
-  //   }
-  // }  
 
 });

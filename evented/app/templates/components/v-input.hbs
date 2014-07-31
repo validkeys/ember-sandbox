@@ -2,10 +2,9 @@
 
 <h1>Is Valid: {{model.isValid}}</h1>
 
-
-{{#if errors}}
+{{#if errorMessages}}
   <ul class="v-errors">
-    {{#each error in errors}}
+    {{#each error in errorMessages}}
       <li>{{error}}</li>
     {{/each}}
   </ul>

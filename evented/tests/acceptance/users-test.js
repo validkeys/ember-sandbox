@@ -48,6 +48,7 @@ test('edit user', function(){
       "first_name": ["you must do"]
     }
   }
+
   server.put('/api/users/1', function(r){
     return [422, {"Content-Type":"application/json"}, JSON.stringify(errors)];
   });
@@ -58,10 +59,11 @@ test('edit user', function(){
     ok(find('.v-errors').length, "Found the errors");
   }).then(function(){
     fillIn('.spec-fn','Klaus');
-    fillIn('.spec-ln','');
   }).then(function(){
     equal(find('.v-errors').length, 0, "Errors are gone");
     click('.spec-submit');
+  }).then(function(){
+    ok(1);
   })
 });
 

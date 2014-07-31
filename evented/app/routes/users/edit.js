@@ -8,9 +8,9 @@ export default Ember.Route.extend({
   actions:{
     edit: function(){
       this.currentModel.save().then(function(){
-        
+        // 
       }, function(error){
-        console.log(error);
+        // console.log(error);
       });
     }
   }

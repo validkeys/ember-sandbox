@@ -1,5 +1,5 @@
 <div>
-  <div>{{v-input classNames="spec-fn" value=first_name name="first_name" model=model}}</div>
-  <div>{{v-input type="text" classNames="spec-ln" value=last_name name="last_name" model=model}}</div>
+  <div>{{v-input classNames="spec-fn" value=firstName name="firstName" ctrlr=controller}}</div>
+  {{!-- <div>{{v-input type="text" classNames="spec-ln" value=lastName name="lastName" model=model}}</div> --}}
   <button class="spec-submit" {{bind-attr disabled=isInvalid}} {{action "edit"}}>Submit</button>
 </div>
