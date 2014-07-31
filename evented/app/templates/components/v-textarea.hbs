@@ -1,0 +1,11 @@
+{{textarea name=name value=value classNames=classNames}}
+
+<h1>Is Valid: {{model.isValid}}</h1>
+
+{{#if errorMessages}}
+  <ul class="v-errors">
+    {{#each error in errorMessages}}
+      <li>{{error}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

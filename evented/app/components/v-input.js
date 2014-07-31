@@ -2,10 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  // init: function(){
-  //   this._super();
-  //   // this.set('errors',[]);
-  // },
   ctrlr: null,
   model:  Ember.computed.alias('ctrlr.model'),
   name:   "",
@@ -17,12 +13,10 @@ export default Ember.Component.extend({
     });
   }.property('name','model.errors.[]'),
 
-
   errorMessages: function(){
     var serverMessages = this.get('serverValidationErrors');
     return serverMessages.concat(this.get('localErrors'));
   }.property('name','serverValidationErrors.[]','localErrors.[]'),
-
 
   localErrors: [],
   updateErrors: function() {
@@ -33,9 +27,9 @@ export default Ember.Component.extend({
 
   didInsertElement: function(){
     this.addObserver("ctrlr.errors." + this.get('name'), this.updateErrors);
-  }
+  },
 
-  // willDestroyElement: function(){
-  //   this.removeObserver("model.errors." + this.get('name'), this.updateErrors);
-  // }
+  willDestroyElement: function(){
+    this.removeObserver("ctrlr.errors." + this.get('name'), this.updateErrors);
+  }
 });
