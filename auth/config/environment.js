@@ -33,7 +33,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
-
+    ENV['simple-auth'] = {
+      authorizer:          'simple-auth-authorizer:oauth2-bearer',
+      authenticationRoute: 'auth/login',
+      crossOriginWhitelist: ['*'],
+      store:               'simple-auth-session-store:ephemeral'
+    };
+    console.log(ENV);
   }
 
   if (environment === 'production') {
