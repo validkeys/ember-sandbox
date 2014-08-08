@@ -1,0 +1,11 @@
+<h2 id='title'>Welcome to Ember.js</h2>
+<h3 id="tttt">User is {{#unless session.isAuthenticated}}NOT {{/unless}}Logged In</h3>
+<p>I can tell whether or not the user is logged in in the templates via session.isAuthenticated</p>
+{{#if session.isAuthenticated}}
+  <button class="logout-button" {{action "invalidateSession"}}>Logout</button>
+{{else}}
+  <button {{action "authenticateSession"}}>Login</button>
+  {{#link-to 'signup'}}Signup{{/link-to}}
+{{/if}}
+{{#link-to 'protected'}}PROTECTED TEST{{/link-to}}
+{{outlet}}
