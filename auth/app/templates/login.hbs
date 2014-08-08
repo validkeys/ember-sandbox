@@ -2,13 +2,14 @@
 <form {{action "authenticate" on="submit"}}>
 <div>
   <p>Email:</p>
-  {{input type="text" name="email" id="identification" value=email}}
+  {{!-- IT'S IMPORTANT THAT THE VALUE HERE IS THE IDENTIFICATION --}}
+  {{input type="text" name="email" id="identification" value=identification}}
 </div>
 <div>
   <p>Password:</p>
   {{input type="password" name="password" id="password" value=password}}
 </div>
 <div>
-  <button type="submit">Login!</button>
+  <button class="login-button" type="submit">Login!</button>
 </div>
 </form>
