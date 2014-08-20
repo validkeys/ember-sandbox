@@ -3,7 +3,7 @@ BuildsController = Ember.ObjectController.extend
 
   canGenerateHtml: 0
 
-  emails: "kyle@pressly.com"
+  emails: ""
 
   addressList:(->
     addresses   = @get('emails').split(',')
@@ -131,13 +131,12 @@ BuildsController = Ember.ObjectController.extend
       Ember.$.ajax
         url: "http://postman.pressly.io:9797/mail"
         type: "POST"
-        # crossDomain: true
         data: JSON.stringify(body)
         dataType: "json"
         accepts: "application/json"
         beforeSend: (xhr) =>
           xhr.setRequestHeader "Authorization", "Basic #{@get('creds')}"
         success: (response) ->
-          alert "SUCCESS"
+          alert "Sent!"
 
 `export default BuildsController;`

@@ -16,10 +16,13 @@
       <button {{action "generate"}}>Generate HTML</button>
     </div>
     <hr>
-    <div class="email-direct">
-      {{input type="text" value=emails placeholder="Enter comma separated list"}}
+    <div class="email-direct title-entry">
+      <h2>Send This Email <small>* Optional</small></h2>
+      {{input type="text" value=emails placeholder="Enter comma separated list of emails"}}
       {{#if canEmail}}
-      <button {{action "email"}}>Email</button>
+      <div class="html-printout">
+        <button {{action "email"}}>Send</button>
+      </div>
       {{/if}}
     </div>
   </div>
