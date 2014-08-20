@@ -103,7 +103,7 @@ BuildsController = Ember.ObjectController.extend
   ).property('canGenerateHtml')
 
   creds:(->
-    tok = "pressly-test:testpressly"
+    tok = "postman:m4ilm3"
     btoa tok
   ).property()
 
@@ -129,14 +129,14 @@ BuildsController = Ember.ObjectController.extend
 
 
       Ember.$.ajax
-        url: "/mail"
+        url: "http://postman.pressly.io:9797/mail"
         type: "POST"
         # crossDomain: true
         data: JSON.stringify(body)
         dataType: "json"
-        # accepts: "application/json"
-        headers:
-          'Authorization': 'Basic cHJlc3NseS10ZXN0OnRlc3RwcmVzc2x5'
+        accepts: "application/json"
+        beforeSend: (xhr) =>
+          xhr.setRequestHeader "Authorization", "Basic #{@get('creds')}"
         success: (response) ->
           alert "SUCCESS"
 
