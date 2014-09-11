@@ -2,6 +2,7 @@
   <div class="left-pane">
     <div class="title-entry">
       <h1>CONFIGURE</h1>
+      {{input type="text" value=logoUrl placeholder="Enter a URL to a logo"}}
       {{input type="text" value=emailTitle placeholder="Enter your title"}}
       {{textarea value=emailBody placeholder="Enter some context"}}
 
@@ -32,6 +33,11 @@
       <tr>
         <td align="center" valign="top">
           {{#view "layouts/emailbase"}}
+          {{#if logoUrl}}
+          <tr>
+            <td align="center" style="text-align: center;"><img style="max-width: 600px" {{bind-attr src=logoUrl}} /></td>
+          </tr>
+          {{/if}}
           <tr>
             <td align="left">
               <div style="width: 600px; margin: 40px auto 0 auto; font-family: 'Arial'; text-align: left;">

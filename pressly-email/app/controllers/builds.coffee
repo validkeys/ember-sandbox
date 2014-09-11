@@ -20,9 +20,9 @@ BuildsController = Ember.ObjectController.extend
     @get('emails.length') > 0
   ).property('emails')
 
+  logoUrl:    ''
   emailTitle: ''
-
-  emailBody: ''
+  emailBody:  ''
 
   utmCampaignName: ''
   utmCampaignSource: ''
