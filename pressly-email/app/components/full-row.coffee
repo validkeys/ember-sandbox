@@ -7,8 +7,10 @@ FullRowComponent = Ember.Component.extend
 
   imageWidth: 600
 
+  fontColor: "#000000"
+
   style:(->
-    "text-align: left;"
-  ).property()
+    "vertical-align: top; text-align: left; color: #{@get("fontColor")} !important;"
+  ).property("fontColor")
 
 `export default FullRowComponent;`

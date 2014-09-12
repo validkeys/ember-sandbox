@@ -22,6 +22,8 @@ app.import('vendor/sanitize.js/lib/sanitize.js');
 app.import('vendor/js-beautify/js/lib/beautify.js');
 app.import('vendor/js-beautify/js/lib/beautify-html.js');
 app.import('vendor/highlight.js/src/styles/github.css');
+app.import('vendor/jquery-minicolors/jquery.minicolors.js');
+app.import('vendor/jquery-minicolors/jquery.minicolors.css');
 
 
 module.exports = app.toTree();

@@ -12,9 +12,30 @@ EmbedClickerComponent = Ember.Component.extend
 
   width: 198
 
+  fontColor: "#000000"
+  cc:(->
+    "Embed Clicked picked up font color change"
+  ).observes("fontColor")
+
   style:(->
     "position: relative;"
   ).property()
+
+  defaultLinkStyle:(->
+    "text-decoration: none; color: #{@get("fontColor")};"
+  ).property('fontColor')
+
+  headingStyle:(->
+    "text-align: left; font-weight: bold; line-height: 25px;padding: 0px 10px 0 0px; margin: 0;font-size: 19px; color: #{@get('fontColor')};"
+  ).property('fontColor')
+
+  descriptionBlockStyle:(->
+    "font-size: 13px; font-weight: regular; line-height: 20px; color: #{@get("fontColor")}; padding: 0px 10px 0 0; margin: 5px 0 0 0;"
+  ).property('fontColor')
+
+  authorStyle:(->
+    "font-size: 12px; line-height: 12px; text-transform: uppercase; letter-spacing: .1em; margin: 0; padding: 0 0 5px; display: block; font-weight: 100; text-decoration: none; color: #{@get('fontColor')};"
+  ).property('fontColor')
 
   imageSource:(->
     width = @get('imageWidth')
@@ -23,8 +44,8 @@ EmbedClickerComponent = Ember.Component.extend
   ).property('article.thumbnail_url')
 
   defaultImageCellStyle:(->
-    "padding-bottom: 10px; height: 300px;"
-  ).property('article.thumbnail_url')
+    "padding-bottom: 10px; height: 300px; color: #{@get('fontColor')}"
+  ).property('article.thumbnail_url','fontColor')
 
   smartphoneImageBlockStyle:(->
     "width: 198px;"

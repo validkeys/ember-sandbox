@@ -20,9 +20,28 @@ BuildsController = Ember.ObjectController.extend
     @get('emails.length') > 0
   ).property('emails')
 
+  logoWidth: 0
+  onImageChange:(->
+    Ember.run.later =>
+      naturalWidth = $('img.logo-image')[0].naturalWidth
+      newWidth = if naturalWidth > 600 then 600 else naturalWidth
+      @set "logoWidth", newWidth
+    , 500
+  ).observes('logoUrl')
+
+  bgColor:    '#ffffff'
+  fontColor:  "#000000"
   logoUrl:    ''
   emailTitle: ''
   emailBody:  ''
+
+  titleStyle:(->
+    "border-bottom: #{@get('fontColor')} 1px solid; padding-bottom: 20px; margin-bottom: 20px; font-size: 26px; line-height: 1.3em; color: #{@get('fontColor')};"
+  ).property('fontColor')
+
+  bodyStyle:(->
+    "font-size: 15px; line-height:1.5em; padding: 10px 0; color: #{@get('fontColor')};"
+  ).property('fontColor')
 
   utmCampaignName: ''
   utmCampaignSource: ''
@@ -44,6 +63,8 @@ BuildsController = Ember.ObjectController.extend
 
   wrapperHtml:(->
 
+    color = @get("bgColor")
+
     str = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -54,12 +75,14 @@ BuildsController = Ember.ObjectController.extend
 
     </head>
 
-    <body style="font-family: \'Arial\';">
+    <body style="font-family: \'Arial\'; background-color: ' + color + ';">
     [[INSERT-EMAIL]]
     </body>
-    </html>';
+    </html>'
 
-  ).property()
+    str
+
+  ).property('bgColor')
 
   outterTemplate: (innerHtml) ->
     @get('wrapperHtml').replace('[[INSERT-EMAIL]]', innerHtml)

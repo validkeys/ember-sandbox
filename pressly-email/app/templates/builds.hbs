@@ -3,6 +3,11 @@
     <div class="title-entry">
       <h1>CONFIGURE</h1>
       {{input type="text" value=logoUrl placeholder="Enter a URL to a logo"}}
+
+      <label>Background Color</label>
+      {{view 'color-picker' valueBinding=bgColor label="Background Color"}}
+      <label>Font Color</label>
+      {{view 'color-picker' valueBinding=fontColor label="Font Color"}}
       {{input type="text" value=emailTitle placeholder="Enter your title"}}
       {{textarea value=emailBody placeholder="Enter some context"}}
 
@@ -29,20 +34,23 @@
   </div>
 
   <div id="email-content">
-    <table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
+    <table {{bind-attr bgcolor=bgColor}} border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
       <tr>
         <td align="center" valign="top">
           {{#view "layouts/emailbase"}}
           {{#if logoUrl}}
           <tr>
-            <td align="center" style="text-align: center;"><img style="max-width: 600px" {{bind-attr src=logoUrl}} /></td>
+            <td align="center" style="text-align: center;">
+              {{size-slider widthBinding="logoWidth" logoUrlBinding="logoUrl"}}
+              <img class="logo-image" {{bind-attr width=logoWidth}} style="max-width: 600px" {{bind-attr src=logoUrl}} />
+            </td>
           </tr>
           {{/if}}
           <tr>
             <td align="left">
               <div style="width: 600px; margin: 40px auto 0 auto; font-family: 'Arial'; text-align: left;">
-                <h1 style="border-bottom: #000 1px solid; padding-bottom: 20px; margin-bottom: 20px; font-size: 26px; line-height: 1.3em;">{{emailTitle}}</h1>
-                <p style="font-size: 15px; line-height:1.5em; padding: 10px 0;">{{emailBody}}</p>
+                <h1 {{bind-attr style=titleStyle}}>{{emailTitle}}</h1>
+                <p {{bind-attr style=bodyStyle}}>{{emailBody}}</p>
               </div>
             </td>
           </tr>

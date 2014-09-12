@@ -6,6 +6,7 @@ LayoutsBuildRoute = Ember.Route.extend
     }
 
   renderTemplate: (controller) ->
-    @render "layouts/templates/#{controller.get('model.letter')}"
+    @render "layouts/templates/#{controller.get('model.letter')}",
+      controller: controller
 
 `export default LayoutsBuildRoute;`
