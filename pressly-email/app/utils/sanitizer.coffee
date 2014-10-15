@@ -1,5 +1,5 @@
 sanitizer = new Sanitize(
-  elements: ['a','p','b','u','i','em','h1','h2','h3','h4','h5','h6','blockquote','table','tr','td','img','small','span','div']
+  elements: ['a','p','b','u','i','em','h1','h2','h3','h4','h5','h6','blockquote','table','tr','td','img','small','span','div','br']
   attributes:
     a: ['href','title','style']
     table: ['style','width','height','cellspacing','cellpadding','align','valign','bgcolor','color']

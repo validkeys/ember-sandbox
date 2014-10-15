@@ -35,6 +35,10 @@ BuildsController = Ember.ObjectController.extend
   emailTitle: ''
   emailBody:  ''
 
+  formattedEmailBody:(->
+    @get('emailBody').replace(/\n/g, "<br />")
+  ).property('emailBody')
+
   titleStyle:(->
     "border-bottom: #{@get('fontColor')} 1px solid; padding-bottom: 20px; margin-bottom: 20px; font-size: 26px; line-height: 1.3em; color: #{@get('fontColor')};"
   ).property('fontColor')
