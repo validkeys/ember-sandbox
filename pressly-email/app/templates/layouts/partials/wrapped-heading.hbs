@@ -1,9 +1,9 @@
 {{#if article.author_name}}
   <span {{bind-attr style=authorStyle}}>{{ article.author_name }}</span>
 {{/if}}
-<a {{bind-attr href=article.url}} {{bind-attr style=defaultLinkStyle}}  target="_blank">
+<a {{bind-attr href=printUrl}} {{bind-attr style=defaultLinkStyle}}  target="_blank">
   <h2 {{bind-attr style=headingStyle}}>
-    <a {{bind-attr href=article.url}} border="none" style="text-decoration: none;">
+    <a {{bind-attr href=printUrl}} border="none" style="text-decoration: none;">
       <span {{bind-attr style=headingStyle}}>{{article.title}}</span>
     </a>
   </h2>
